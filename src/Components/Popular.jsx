@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 
 function Popular() {
+
+const [popular, setPopular]= useState([])
 
 //useEffect being used to call API when mounting/ loading of application. Array is added to pass data
   useEffect(() => {
@@ -12,10 +14,19 @@ function Popular() {
       `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
     );
     const data = await api.json();
-    console.log(data);
+    // console.log(data);
+    setPopular(data.recipes)
   };
 
-  return <div>Popular</div>;
+  return <div>
+    {popular.map((recipe) =>{
+      return(
+        <div>
+          <p>{recipe.title}</p>
+        </div>
+      );
+    })}
+  </div>;
 }
 
 export default Popular;
