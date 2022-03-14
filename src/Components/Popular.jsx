@@ -21,7 +21,8 @@ const [popular, setPopular]= useState([])
   return <div>
     {popular.map((recipe) =>{
       return(
-        <div>
+        //adding the recipe.id gives each child an unique "key" prop
+        <div key={recipe.id}>
           <p>{recipe.title}</p>
         </div>
       );
