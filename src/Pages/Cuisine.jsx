@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+
 
 function Cuisine() {
   return (
-    <div>cuisine</div>
-  )
+    <div>
+      <h1>hello</h1>
+    </div>
+  );
 }
 
-export default Cuisine
+export default Cuisine;
