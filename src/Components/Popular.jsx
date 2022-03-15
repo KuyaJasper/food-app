@@ -3,6 +3,7 @@ import styled from "styled-components";
 // Splide lets me use carosels. https://splidejs.com/integration/react-splide/
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
+import { Link } from "react-router-dom";
 
 function Popular() {
   const [popular, setPopular] = useState([]);
@@ -45,9 +46,11 @@ function Popular() {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
+                  <Link to={"/recipie/" +recipe.id}>
                   <p>{recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title} />
                   <Gradient />
+                  </Link>
                 </Card>
               </SplideSlide>
             );
