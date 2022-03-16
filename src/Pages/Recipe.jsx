@@ -23,11 +23,12 @@ function Recipe() {
 
   return (
     <DetailWrapper>
-      <div>
+      <div className="detailsContainer">
         <h2>{details.title}</h2>
         <img src={details.image} alt="" />
       </div>
       <Info>
+        <ButtonMobile>
         <Button
           className={activeTab === "instructions" ? "active" : ""}
           onClick={() => setActiveTab("instructions")}
@@ -40,6 +41,7 @@ function Recipe() {
         >
           Ingredients
         </Button>
+        </ButtonMobile>
         {activeTab === "instructions" && (
           <div>
             <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
@@ -76,6 +78,27 @@ const DetailWrapper = styled.div`
   ul {
     margin-top: 2rem;
   }
+
+  @media only screen and (min-device-width: 200px) and (max-device-width: 844px){
+    margin-top: 3rem ;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: center ;
+    img{
+      width: 70% ;
+    }
+    .detailsContainer{
+      display: flex ;
+      justify-content: center ;
+      flex-direction: column ;
+      align-items: center ;
+      text-align:center ;
+    }
+    h3{
+      font-size: 1rem;
+    }
+  }
 `;
 
 const Button = styled.button`
@@ -88,6 +111,19 @@ const Button = styled.button`
 `;
 const Info = styled.div`
   margin-left: 10rem;
+  @media only screen and (min-device-width: 200px) and (max-device-width: 844px){
+    margin-left: 1rem ;
+  }
+
+`;
+
+const ButtonMobile = styled.div`
+  @media only screen and (min-device-width: 200px) and (max-device-width: 844px){
+    margin-top:2rem ;
+    display: flex ;
+    flex-direction: row ;
+  }
+
 `;
 
 export default Recipe;
