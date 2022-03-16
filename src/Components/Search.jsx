@@ -51,6 +51,10 @@ const FormStyle = styled.form`
     transform: translate(100%, -50%);
     color: white;
   }
+
+  @media only screen and (min-device-width: 200px) and (max-device-width: 1024px){
+    margin: 0 0 0 0  ;
+  }
 `;
 
 export default Search;

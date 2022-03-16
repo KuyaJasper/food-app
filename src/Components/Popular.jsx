@@ -63,6 +63,12 @@ function Popular() {
 
 const Wrapper = styled.div`
   margin: 4rem 0rem;
+
+  @media only screen and (min-device-width: 200px) and (max-device-width: 1024px){
+    
+    width: 100vw ;
+    
+  }
 `;
 const Card = styled.div`
   min-height: 25rem;
@@ -94,6 +100,15 @@ const Card = styled.div`
     justify-content: center;
     align-items: center;
   }
+  @media only screen and (min-device-width: 200px) and (max-device-width: 1024px) {
+    min-height: 10rem;
+    width: 7rem;
+    p {
+      font-size: 0.6rem;
+      width: 80%;
+    }
+  }
+
 `;
 
 const Gradient = styled.div`
@@ -102,5 +117,9 @@ const Gradient = styled.div`
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+
+
+
+
 `;
 export default Popular;

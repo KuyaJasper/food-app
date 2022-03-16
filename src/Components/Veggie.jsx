@@ -5,9 +5,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Link } from "react-router-dom";
 
-
 function Veggie() {
-
   const [veggie, setVeggie] = useState([]);
 
   //useEffect being used to call API when mounting/ loading of application. Array is added to pass data
@@ -48,10 +46,10 @@ function Veggie() {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
-                <Link to={"/recipe/" +recipe.id}>
-                  <p>{recipe.title}</p>
-                  <img src={recipe.image} alt={recipe.title} />
-                  <Gradient />
+                  <Link to={"/recipe/" + recipe.id}>
+                    <p>{recipe.title}</p>
+                    <img src={recipe.image} alt={recipe.title} />
+                    <Gradient />
                   </Link>
                 </Card>
               </SplideSlide>
@@ -60,12 +58,15 @@ function Veggie() {
         </Splide>
       </Wrapper>
     </div>
-  )
+  );
 }
-
 
 const Wrapper = styled.div`
   margin: 4rem 0rem;
+
+  @media only screen and (min-device-width: 200px) and (max-device-width: 1024px) {
+    width: 100vw;
+  }
 `;
 const Card = styled.div`
   min-height: 25rem;
@@ -97,6 +98,14 @@ const Card = styled.div`
     justify-content: center;
     align-items: center;
   }
+  @media only screen and (min-device-width: 200px) and (max-device-width: 1024px) {
+    min-height: 10rem;
+    width: 9rem;
+    p {
+      font-size: 0.8rem;
+      width: 80%;
+    }
+  }
 `;
 
 const Gradient = styled.div`
@@ -107,4 +116,4 @@ const Gradient = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
 
-export default Veggie
+export default Veggie;
