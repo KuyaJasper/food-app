@@ -64,7 +64,7 @@ function Veggie() {
 const Wrapper = styled.div`
   margin: 4rem 0rem;
 
-  @media only screen and (min-device-width: 200px) and (max-device-width: 1024px) {
+  @media only screen and (min-device-width: 200px) and (max-device-width: 844px) {
     width: 100vw;
   }
 `;
@@ -98,7 +98,7 @@ const Card = styled.div`
     justify-content: center;
     align-items: center;
   }
-  @media only screen and (min-device-width: 200px) and (max-device-width: 1024px) {
+  @media only screen and (min-device-width: 200px) and (max-device-width: 844px) {
     min-height: 10rem;
     width: 9rem;
     p {

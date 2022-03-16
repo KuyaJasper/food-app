@@ -34,6 +34,9 @@ const List = styled.div`
   display: flex;
   justify-content: center;
   margin: 2rem 0rem;
+  @media only screen and (min-device-width: 200px) and (max-device-width: 844px) {
+
+  }
 `;
 
 const SLink = styled(NavLink)`
@@ -65,6 +68,12 @@ const SLink = styled(NavLink)`
       h4{
         color: white;
       }
+    }
+    @media only screen and (min-device-width: 200px) and (max-device-width: 844px) {
+width: 30vw ;
+height: 9vh ;
+margin-right: 0 ;
+
     }
 `
 export default Category;
